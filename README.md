@@ -4,9 +4,14 @@ Type less - get more done.
 VQ stands for vanilla-query and is just a shortcut to default JS functions.
 
 # How
-**First include the .js file**
+## Include VQ.js
+Download the VQ.js from the src folder and add it to your project, then:
 
-    <script src="your/path/VQ.js"></script>
+    <script src="your/local/path/VQ.js"></script>
+
+Or use jsdelivr to include it:
+
+    <script src="https://cdn.jsdelivr.net/gh/vincenz-e/VQ.js@main/src/VQ.js"></script>
 
 ## Usage
 
@@ -44,6 +49,13 @@ VQCL returns all elements with given class:
 | VQID('heading')    |   document.getElementById('heading')    | $('#heading') // but is reeeally slow |
 | VQCL('meep')       | document.getElementsByClassName('meep') |    $('.meep') // but is reeeally slow |
 
+| Package    |  Size  | Query Time* |
+| ---------- | :----: | ----------: |
+| Vanilla.js |  0 kB  |       100 % |
+| VQ.js      | 0.3 kB |     100.4 % |
+| jQuery     | 30 kB  |     125.2 % |
+
+*Query time: Average value of running equal queries each 100 000 times.
 
 # Why
 Type less and get more done.
@@ -75,3 +87,15 @@ Also it's less than 400 Bytes to include VQ. This is almost the same as having `
   
 **A:** Yeah, I was just using the Q at first, but I'm a bit afraid of collisions and also the whole naming works better with VQ.  
 But there is a solution: Clone the repo and make your own Q version :)
+  
+---
+
+**Q:** Are you serious?
+  
+**A:** Yes.
+  
+---
+
+**Q:** How is this even comparable to a complex and diverse library as jQuery?
+  
+**A:** It's not. I just don't want to type so much to use default JavaScript functions. At this point you should be able to tell that I'm half joking here.
