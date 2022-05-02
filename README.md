@@ -49,20 +49,21 @@ VQCL returns all elements with given class:
 | VQID('heading')    |   document.getElementById('heading')    | $('#heading') // but is reeeally slow |
 | VQCL('meep')       | document.getElementsByClassName('meep') |    $('.meep') // but is reeeally slow |
 
-| Package    |  Size  | Query Time* |
-| ---------- | :----: | ----------: |
-| Vanilla.js |  0 kB  |       100 % |
-| VQ.js      | 0.3 kB |     100.4 % |
-| jQuery     | 30 kB  |     125.2 % |
+| Package    |  Size  | Query Time* | Characters to type | Increases technology stack |
+| ---------- | :----: | :---------: | :----------------: | ------------------------: |
+| Vanilla.js |  0 kB  |    100 %    |        ~25         |                        no |
+| VQ.js      | 0.3 kB |   100.4 %   |        2-4         |                not really |
+| jQuery     | 30 kB  |   125.2 %   |         1**        |                       YES |
 
-*Query time: Average value of running equal queries each 100 000 times.
+*Query time: Average value of running equal queries each 100 000 times.  
+**Always have to use # or . for every query.
 
 # Why
 Type less and get more done.
 
-Honestly I find myself still using jQuery just because typing `$(...)` is faster than `document.querySelectorAll(...)` which results in **24 more** characters to type (and also hitting shift twice at the right time).
+Honestly I find myself still using jQuery just because typing `$(...)` is faster than `document.querySelectorAll(...)` which results in **24 more** characters to type (and also hitting shift twice at the right time) every time.
 
-Also it's less than 400 Bytes to include VQ. This is almost the same as having `document.querySelectorAll('foo.bar')` 11 times in your code.
+Also it's less than 400 Bytes to include VQ.js. This is almost the same as having `document.querySelectorAll('foo.bar')` 11 times in your code.
 
 # FAQ
 **Q:** But adding a custom function to Element.prototype is bad practice!!!1!
